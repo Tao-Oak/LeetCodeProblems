@@ -9,7 +9,7 @@ int main(void) {
 }
 
 void moveZeroes(int* nums, int numsSize) {
-    int holePos = 0, seekPos = 0;
+	int holePos = 0, seekPos = 0;
 
 	for (; seekPos < numsSize; seekPos++) {
 		if (nums[seekPos] != 0) {
@@ -20,4 +20,6 @@ void moveZeroes(int* nums, int numsSize) {
 	for (; holePos < numsSize; holePos++) {
 		nums[holePos] = 0;
 	}
+
+	// add something
 }
