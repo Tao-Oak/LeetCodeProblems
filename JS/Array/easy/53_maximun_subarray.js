@@ -12,16 +12,17 @@
  * @return {number}
  */
 var maxSubArray = function(nums) {
-  // var length = nums.length
-  // if (length < 2) {
-  //   return nums[0]
-  // }
+  var length = nums.length
+  if (length < 2) {
+    return nums[0]
+  }
 
-  // var maxSum = nums[0], currentMaxSum = Number.NEGATIVE_INFINITY
-  // for (var i = 1; i < length; i++) {
-  //   if (nums[i - 1] > currentMaxSum) {
-  //     currentMaxSum = nums[i -1]
-  //   }
-  //   var sun
-  // }
+  var maxSum = nums[0], currentMaxSum = nums[0]
+  for (var i = 1; i < length; i++) {
+    currentMaxSum = currentMaxSum > 0 ? currentMaxSum + nums[i] : nums[i]
+    if (currentMaxSum > maxSum) {
+      maxSum = currentMaxSum
+    }
+  }
+  return maxSum
 };
