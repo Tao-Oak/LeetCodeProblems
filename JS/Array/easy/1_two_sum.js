@@ -16,12 +16,9 @@ var twoSum = function(nums, target) {
   var resultMap = {}
 
   for (var i = 0; i < nums.length; i++) {
-    console.log(`target: ${target}, nums[i]: ${nums[i]}`)
     var expected = target - nums[i]
-    console.log('expected:', expected)
-    console.log('resultMap:', resultMap)
     if (resultMap[expected] !== undefined) {
-      return [i, resultMap[expected]]
+      return [resultMap[expected], i]
     }
     resultMap[nums[i]] = i
   }
