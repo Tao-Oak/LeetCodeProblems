@@ -25,7 +25,7 @@ var findMaxConsecutiveOnes = function(nums) {
   return maxConsecutiveOnes
 };
 
-var findMaxConsecutiveOnes = function(nums) {
+var findMaxConsecutiveOnes_2 = function(nums) {
   var maxConsecutiveOnes = 0, consecutiveOnes = 0
   for (var i = 0; i < nums.length; i++) {
     if (nums[i] === 1) {
@@ -38,7 +38,7 @@ var findMaxConsecutiveOnes = function(nums) {
   return Math.max(maxConsecutiveOnes, consecutiveOnes)
 };
 
-var findMaxConsecutiveOnes = function(nums) {
+var findMaxConsecutiveOnes_3 = function(nums) {
   var divideAndConquer = function (nums, left, right) {
     if (left === right) {
       return nums[left]
@@ -64,7 +64,7 @@ var findMaxConsecutiveOnes = function(nums) {
 }
 
 // Wrote by biubiu
-var findMaxConsecutiveOnes_3 = function(nums) {
+var findMaxConsecutiveOnes_4 = function(nums) {
   var merge = function(nums, l1, r1, l2, r2) {
     var count = 0;
     while(nums[r1] === 1 && r1 >= l1) {
