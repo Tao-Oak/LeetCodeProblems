@@ -51,12 +51,10 @@ var arrayPairSum = function (nums) {
   }
 
   var quickSort = function (nums, low, hight) {
-    console.log(`low: ${low} high: ${hight}`)
     if (low >= hight) {
       return
     }
-    var middle = partition(nums, low, hight) - 1
-    console.log(`middle: ${middle}`)
+    var middle = partition(nums, low, hight)
     quickSort(nums, low, middle - 1)
     quickSort(nums, middle + 1, hight)
   }
