@@ -4,7 +4,7 @@
 
 /*
  * LeetCode link:
- * https://leetcode.com/problems/contains-duplicate-ii/description/
+ * https://leetcode.com/problems/two-sum/description/
  */
 
 /**
