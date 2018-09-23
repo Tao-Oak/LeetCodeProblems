@@ -1,10 +1,9 @@
-import java.util.Arrays;
-
 //
 // Created by Joshua.cao, 2018/09/23
 //
 // https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/description/
 //
+import java.util.Arrays;
 
 public class RemoveDuplicates {
   public int removeDuplicates(int[] nums) {
