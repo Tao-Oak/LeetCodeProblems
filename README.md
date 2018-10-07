@@ -1,1 +1,1 @@
-# LeetCodeProblems My answers to LeetCode OJ problems
+My answers to LeetCode problems using Java and JavaScript
