@@ -20,7 +20,7 @@ public class CombinationSumTwo {
     return result;
   }
 
-  private void backtrack(List<List<Integer>> result, List<Integer> temp, int[] nums, int start, int remain) {
+  public void backtrack(List<List<Integer>> result, List<Integer> temp, int[] nums, int start, int remain) {
     for (int i = start; i < nums.length; i++) {
       if (nums[i] > remain) {
         break;
@@ -44,7 +44,7 @@ public class CombinationSumTwo {
     }
   }
 
-  private void backtrack_2(List<List<Integer>> result, List<Integer> temp, int[] nums, int start, int remain) {
+  public void backtrack_2(List<List<Integer>> result, List<Integer> temp, int[] nums, int start, int remain) {
     if (remain < 0) return;
     if (remain == 0) {
       result.add(new ArrayList<>(temp));
