@@ -3,31 +3,26 @@
 //
 // https://leetcode.com/problems/minimum-size-subarray-sum/
 //
+// Related Problems: ['713 Subarray product Less Than K']
+//
 
 public class MinimumSizeSubarraySum {
+  // Accepted, beats 55.35%
   public int minSubArrayLen(int s, int[] nums) {
-    int minLength = Integer.MAX_VALUE;
-    int left = 0;
-    int right = left;
-    int sum = 0;
-    while (right < nums.length) {
+    int left = 0, sum = 0;
+    int minLen = Integer.MAX_VALUE;
+    for (int right = 0; right < nums.length; right++) {
       sum += nums[right];
-      if (sum >= s) {
-        minLength = Math.min(minLength, right - left + 1);
-      }
-      while (sum >= s) {
-        sum -= nums[left];
-        left++;
+      if (sum >= s) minLen = Math.min(minLen, right - left + 1);
+      while(sum >= s && left <= right) {
+        sum -= nums[left++];
         if (sum >= s) {
-          minLength = Math.min(minLength, right - left + 1);
+          minLen = Math.min(minLen, right - left + 1);
         }
       }
-      right++;
     }
-    if (minLength == Integer.MAX_VALUE) {
-      minLength = 0;
-    }
-    return minLength;
+    if (minLen == Integer.MAX_VALUE) minLen = 0;
+    return minLen;
   }
   
   // Accepted, beats 7.01%
@@ -62,6 +57,6 @@ public class MinimumSizeSubarraySum {
   public static void main(String[] args) {
     MinimumSizeSubarraySum obj = new MinimumSizeSubarraySum();
     int[] input_1 = {2,3,1,2,4,3};
-    System.out.println(obj.minSubArrayLen(7, input_1));
+    System.out.println(obj.minSubArrayLen_3(7, input_1));
   }
 }
