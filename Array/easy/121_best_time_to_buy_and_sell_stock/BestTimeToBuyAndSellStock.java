@@ -20,9 +20,24 @@ public class BestTimeToBuyAndSellStock {
     return maximum;
   }
 
+  public int maxProfit_2(int[] prices) {
+    if (prices.length <= 1) return 0;
+    int profit = 0, minimumPrice = prices[0];
+
+    for (int i = 1; i < prices.length; i++) {
+      if (prices[i] < minimumPrice) {
+        minimumPrice = prices[i];
+        continue;
+      }
+      int diff = prices[i] - minimumPrice;
+      if (diff > profit) profit = diff;
+    }
+    return profit;
+  }
+
   public static void main(String[] args) {
     BestTimeToBuyAndSellStock obj = new BestTimeToBuyAndSellStock();
     int[] input = {7,1,5,3,6,4};
-    System.out.println(obj.maxProfit(input));
+    System.out.println(obj.maxProfit_2(input));
   }
 }
