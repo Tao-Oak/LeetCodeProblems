@@ -3,6 +3,9 @@
 //
 // https://leetcode.com/problems/maximum-length-of-repeated-subarray/
 //
+// Similar problems:
+//   https://leetcode.com/problems/length-of-longest-fibonacci-subsequence/
+//
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
