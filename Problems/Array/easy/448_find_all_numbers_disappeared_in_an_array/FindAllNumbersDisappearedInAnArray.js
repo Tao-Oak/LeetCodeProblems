@@ -1,11 +1,8 @@
 //
 // Created by CaoTao, 2018/03/09
 //
-
-/*
- * LeetCode link:
- * https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/description/
- */
+// https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/description/
+//
 
 // O(n) runtime without extra space
 var findDisappearedNumbers = function(nums) {
